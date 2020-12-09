@@ -3,6 +3,8 @@ const path = require("path");
 
 const express = require("express");
 
+const cors =require('cors');
+
 const app = express();
 app.listen(3007, () => console.log("大事件服务已开启了"));
 
@@ -26,4 +28,12 @@ app.use((err, req, res, next) => {
     });
    }
 });
+
+// 设置应用级别的设置
+app.use(cors());
+
+app.use(express.urlencoded({extended:false}));
+
+app.use(express.static('uploads'))
+
 

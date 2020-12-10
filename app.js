@@ -36,4 +36,9 @@ app.use(express.urlencoded({extended:false}));
 
 app.use(express.static('uploads'))
 
+// 这是我第三次提交的代码
+// 所以呢
+app.use(express.static('uploads'))
+app.use(express.static("uploads"));
+
 
